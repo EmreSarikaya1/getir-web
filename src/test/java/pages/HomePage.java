@@ -19,8 +19,8 @@ public class HomePage extends HomePageObjects {
         return this;
     }
 
-    public CategoryPage getCategory(){
-        String categoryName = "Fit & Form";
+    public CategoryPage getCategory(String categoryText){
+        String categoryName = categoryText;
 
        Optional<WebElement> category =  categories.stream()
                .filter(element -> element.getText().trim().equalsIgnoreCase(categoryName)).findFirst();
